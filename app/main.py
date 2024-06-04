@@ -13,7 +13,7 @@ class OnlineCourse:
         return ceil(days_in_weeks)
 
     @classmethod
-    def from_dict(cls, course_dict) -> 'OnlineCourse':
+    def from_dict(cls, course_dict: dict) -> "OnlineCourse":
         days = course_dict.get("days")
         if days is not None:
             weeks = cls.days_to_weeks(days)
